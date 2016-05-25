@@ -18,3 +18,16 @@ def ifacestartswith(cidr):
                 if inet['address'][0:size] == pattern:
                     intfnames.append(inet['label'])
     return intfnames
+
+def iphexval(ip):
+    '''
+    Retrieve the interface name from a specific CIDR
+
+    CLI Example:
+
+    .. code-block:: bash
+              
+        salt '*' customnetwork.iphexval 10.0.0.1
+    '''
+    a = ip.split('.')
+    return '{:02X}{:02X}{:02X}{:02X}'.format(*map(int, a))
