@@ -4,6 +4,11 @@ def getothermountpoints(to_ignore=[]):
 
     CLI Example:
 
+    To get all mountpoint except the standard ones
+    .. code-block:: bash
+        
+        salt '*' custommount.getothermountpoints
+
     To get all mountpoint except the [ standard ones + /media/disk1 and /scratch ]
     .. code-block:: bash
         
